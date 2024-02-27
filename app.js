@@ -15,15 +15,11 @@ app.use(express.static(path.join(__dirname, 'public')));
  
 module.exports = app;
 
-const bookRouter = require('./routes/book');
-app.use('/book', bookRouter);
+const opiskelijaRouter = require('./routes/opiskelija');
+app.use('/opiskelija', opiskelijaRouter);
 
-const borrowerRouter = require('./routes/borrower');
-app.use('/borrower', borrowerRouter);
+const opintojaksoRouter = require('./routes/opintojakso');
+app.use('/opintojakso', opintojaksoRouter);
 
-
-
-
-
-
-
+const arviointiRouter = require('./routes/arviointi');
+app.use('/arviointi', arviointiRouter);
